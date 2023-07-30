@@ -7,7 +7,7 @@ import { SystemProgram, LAMPORTS_PER_SOL, sendAndConfirmTransaction } from '@sol
 
 async function main() {
     const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'))
-    const base58DecodedPK = base58.decode('3Ch2xLVU6uSphFzsSzzLFZmr1w37YdQyKm6ULskN5B4H7xxjnUdWQT8wc1rQciw2bMB8MZa7n2N64nmvEuuVv8ks');
+    const base58DecodedPK = base58.decode(<PRIVATEKEY>);
     const signer = Web3.Keypair.fromSecretKey(base58DecodedPK);
     const transaction = new Web3.Transaction();
     const instruction = new Web3.TransactionInstruction({
